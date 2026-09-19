@@ -19,12 +19,26 @@
         height: 100%;
         margin: 0;
         overflow: hidden;
+      }
+
+      html {
         background: #000;
+      }
+
+      body {
+        position: relative;
+        background: transparent;
       }
 
       a-scene {
         position: fixed;
         inset: 0;
+        z-index: 1;
+        background: transparent !important;
+      }
+
+      body > video {
+        z-index: 0 !important;
       }
 
       .a-enter-vr,
@@ -42,16 +56,15 @@
       mindar-image="imageTargetSrc: ./targets.mind;
                     autoStart: true;
                     uiLoading: no;
-                    uiScanning: no;
-                    uiError: no;
+                    uiScanning: yes;
+                    uiError: yes;
                     filterMinCF: 0.0001;
                     filterBeta: 0.001;"
       color-space="sRGB"
-      renderer="colorManagement: true; physicallyCorrectLights: true; exposure: 1.15; antialias: true;"
+      renderer="alpha: true; colorManagement: true; physicallyCorrectLights: true; exposure: 1.15; antialias: true;"
       vr-mode-ui="enabled: false"
       device-orientation-permission-ui="enabled: false"
       loading-screen="enabled: false"
-      embedded
     >
       <a-assets timeout="15000">
         <a-asset-item id="sword-model" src="./assets/model.glb"></a-asset-item>
