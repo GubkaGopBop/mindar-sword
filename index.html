@@ -21,26 +21,6 @@
         overflow: hidden;
       }
 
-      html {
-        background: #000;
-      }
-
-      body {
-        position: relative;
-        background: transparent;
-      }
-
-      a-scene {
-        position: fixed;
-        inset: 0;
-        z-index: 1;
-        background: transparent !important;
-      }
-
-      body > video {
-        z-index: 0 !important;
-      }
-
       .a-enter-vr,
       .a-enter-ar,
       .a-orientation-modal,
@@ -61,7 +41,7 @@
                     filterMinCF: 0.0001;
                     filterBeta: 0.001;"
       color-space="sRGB"
-      renderer="alpha: true; colorManagement: true; physicallyCorrectLights: true; exposure: 1.15; antialias: true;"
+      renderer="colorManagement: true; physicallyCorrectLights: true; exposure: 1.15; antialias: true;"
       vr-mode-ui="enabled: false"
       device-orientation-permission-ui="enabled: false"
       loading-screen="enabled: false"
